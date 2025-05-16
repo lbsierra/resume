@@ -1,0 +1,88 @@
+body {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, #00c6ff, #0072ff);
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+  }
+  
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  
+  h1 {
+    font-family: "Courier New", Courier, monospace;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(15, end) forwards;
+  }
+  
+  h1::after {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 1em;
+    background-color: black;
+    animation: blink 0.8s infinite;
+  }
+
+  main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+    .links a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+        margin: 10px 0;
+        padding: 10px 20px;
+        border-radius: 5px;
+        background-color: #0072ff;
+        transition: background-color 0.3s ease;
+    }
+
+@media (min-width: 768px) {
+    body {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+   
+   header {
+     margin-top: 150px;
+   }
+
+    main {
+        min-height: 250px;
+        margin-top: 150px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    .links a {
+        font-size: 24px;
+        padding: 15px 30px;
+    }
+}
